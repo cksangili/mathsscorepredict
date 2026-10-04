@@ -1,0 +1,45 @@
+file_path: "./data/regression_bonus_practice_data.csv"
+target_column: final_test
+
+val_test_size: 0.2
+val_size: 0.5
+
+cv: 5
+scoring: r2
+random_state: 42
+
+numerical_features:
+  - number_of_siblings
+  - n_male
+  - n_female
+  - age
+  - hours_per_week
+  - attendance_rate
+  - sleep_duration_hours
+
+nominal_features:
+  - direct_admission
+  - CCA
+  - learning_style
+  - gender
+  - tuition
+  - mode_of_transport
+  - bag_color
+
+ordinal_features: []
+passthrough_features: []
+
+models:
+  linear_regression:
+    param_grid:
+      regressor__fit_intercept: [true, false]
+  ridge:
+    param_grid:
+      regressor__alpha: [0.1, 1, 10, 100, 1000]
+      regressor__fit_intercept: [true, false]
+  random_forest:
+    param_grid:
+      regressor__n_estimators: [100, 200]
+      regressor__max_depth: [null, 10, 20]
+      regressor__min_samples_split: [2, 5]
+      regressor__min_samples_leaf: [1, 2]
