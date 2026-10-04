@@ -1,4 +1,3 @@
-# mathsscorepredict
 # O-Level Mathematics Score Prediction
 
 ## 1. Project Overview
@@ -580,4 +579,3 @@ The approach includes:
 The final model should be selected based on empirical performance rather than simply choosing the most complex algorithm.
 
 The selected model can support the school in identifying students who may benefit from additional Mathematics support before the O-Level examination.
-
