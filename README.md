@@ -579,3 +579,43 @@ The approach includes:
 The final model should be selected based on empirical performance rather than simply choosing the most complex algorithm.
 
 The selected model can support the school in identifying students who may benefit from additional Mathematics support before the O-Level examination.
+
+## 17. Best Model
+
+Based on the model evaluation performed for this project, **Random Forest Regression is the best-performing model among the three models evaluated**.
+
+| Model | Validation MAE | Validation RMSE | Validation R² |
+|---|---:|---:|---:|
+| Linear Regression | 7.423 | 9.302 | 0.560 |
+| Ridge Regression | 7.426 | 9.304 | 0.559 |
+| **Random Forest Regression** | **5.445** | **7.442** | **0.718** |
+
+Random Forest achieved the:
+
+- **Lowest validation MAE:** 5.445
+- **Lowest validation RMSE:** 7.442
+- **Highest validation R²:** 0.718
+
+On the unseen test dataset, Random Forest achieved approximately:
+
+```text
+Test MAE  = 5.554
+Test RMSE = 7.570
+Test R²   = 0.714
+```
+
+This means that the final Random Forest model predicts the Mathematics score with an average absolute error of approximately **5.6 marks** on the unseen test data.
+
+### Why Random Forest was selected
+
+Student Mathematics performance may involve non-linear relationships and interactions between factors such as attendance rate, study hours, tuition, learning style and sleep duration.
+
+Random Forest can capture these non-linear relationships and feature interactions more effectively than the two linear models evaluated.
+
+Therefore, **Random Forest Regression is selected as the final model for this project**.
+
+> **Important:** Random Forest should be described as the **best model among the three models evaluated on this dataset**, rather than as the universally best regression algorithm.
+
+### Recommended assignment statement
+
+> Random Forest Regression was selected as the most suitable model for predicting O-Level Mathematics scores. It achieved the lowest MAE and RMSE and the highest R² among the three evaluated models. The model achieved a validation MAE of 5.445 and an R² of 0.718. On the unseen test dataset, it achieved an MAE of 5.554 and an R² of 0.714. Therefore, Random Forest provided the best predictive performance among the evaluated models and can be used as a decision-support tool to identify students who may require additional academic support before the O-Level examination.
